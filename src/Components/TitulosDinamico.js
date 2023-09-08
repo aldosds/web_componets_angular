@@ -7,7 +7,8 @@ class TituloDinamoco extends HTMLElement {
         // Base do component Ex: <h1>Aldo</h1>
         const componentRoot = document.createElement("h1");
         //componentRoot.textContent = 'Aldo';
-        componentRoot.textContent = 'Minha noticia';
+        //componentRoot.textContent = 'Minha noticia';
+        componentRoot.textContent = this.getAttribute("titulo"); // Isso é uma PROP: Criado uma propriedade "titulo".
 
         // Estilizar o component
         const style = document.createElement("style");
@@ -15,7 +16,7 @@ class TituloDinamoco extends HTMLElement {
             h1 {
                 color: red;
             }
-        `
+        `;
 
         // Enviar para a shadow
         shadow.appendChild(componentRoot);
